@@ -1,0 +1,47 @@
+:root{
+  --warning: #ffc107;
+}
+#drum-pads-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:.5rem;
+}
+#drum-machine, .shad, .shad:focus{
+  box-shadow: .1rem .25rem .2rem #000;
+}
+#drum-machine{
+  max-width: 98vw;
+  background-color:oldlace;
+  border-radius: 1rem;
+  border: 1px solid #000;
+  overflow: hidden;
+}
+
+#volume{
+  accent-color: var(--warning);
+}
+
+.form-switch .form-check-input {
+  background-image: none;
+  position: relative;
+  box-shadow: 0 0;
+}
+
+.form-switch .form-check-input:checked{
+  box-shadow: 0 0 .4rem .1rem var(--warning);
+}
+
+.form-switch .form-check-input::after {
+  content: "";
+  position: absolute;
+  width: .9rem;
+  height: .9rem;
+  background-color: var(--warning);
+  border-radius: 50%;
+  transition: transform 0.25s ease-in-out;
+}
+
+.form-switch .form-check-input:checked::after {
+  transform: translateX(1.06rem);
+  background-color: #fff; 
+}
